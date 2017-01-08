@@ -23,6 +23,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,7 +49,7 @@ set tabstop=2
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey ctermbg=4
 
 " Shop line numbers
-:set number
+:set number relativenumber
 
 " Set emmets leader key to tab for expansion
 " let g:user_emmet_expandabbr_key='<Tab>'
@@ -84,3 +85,23 @@ let NERDTreeDirArrows=1
 
 " incrementally search
 set incsearch
+
+" Disable X mode hot key
+nnoremap Q <nop>
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Don't backup shit
+set nobackup
+set noswapfile
+" Setup nerd font for nerdtree file icons
+" Currently not working. Nerdfont installed, but missing icons when enabled.
+" set encoding=utf-8
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+" set guifont=DroidSansMonoPLNerd:h12
+let g:airline_powerline_fonts=1
